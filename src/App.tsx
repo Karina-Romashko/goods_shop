@@ -2,7 +2,7 @@ import React from 'react';
 import {Menu1} from "./components/Menu"
  import 'antd/dist/antd.css';
 import { Card1 } from './components/Card';
-import {GoodsCategory} from "./components/GoodsCategory"
+// import {GoodsCategory} from "./components/GoodsCategory"
 import {Footer} from "./components/Footer"
 
 

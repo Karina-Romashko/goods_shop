@@ -11,7 +11,7 @@ img:string;
 
 
 export const Card1:React.FC<CardProps> = ({id, label, price, img}) =>{
-    const { Meta } = Card;
+    // const { Meta } = Card;
     return(
       
     <Card

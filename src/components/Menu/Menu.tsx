@@ -12,7 +12,7 @@ categories:{id:number, type:string, label:string }[];
  export const Menu1:React.FC<MenuProps> = ({categories, })=>{
     return(
         <div>
-            <Menu >
+            <Menu style={{margin:" 0px 10px" , padding:"0px 10px"}} >
                 
                 { categories.map((category) => {
                     return(
