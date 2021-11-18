@@ -83,7 +83,7 @@ items: [{ id: 1, category_type: 'house', label: 'Коврик', price: 99, img: 
      {App.goodsCategory.map((cat)=>(
        <section>
         
-           <h3 style={{textAlign:"center"}}>{cat.category.label} </h3>
+           <h3 style={{textAlign:"center", fontSize:"20px"}}>{cat.category.label} </h3>
 
          <div style={{display:'flex', justifyContent:"center"}}>
            {cat.items.map((item)=>(

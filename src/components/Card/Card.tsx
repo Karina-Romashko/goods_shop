@@ -17,10 +17,13 @@ export const Card1:React.FC<CardProps> = ({id, label, price, img}) =>{
     <Card
         hoverable
         style={{ width: 240, margin:"10px", backgroundColor: 'rgba(0, 0, 0, 0.12)' }}
-        cover={img}
+        // cover={img}
     >
-    <Meta title={label} description={price}  />
-    
+    {/* <Meta title={label} description={price}  /> */}
+
+    <img src={img} alt="" style={{width:"190px" , height:"110px"}} />
+    {label} <br/>
+    {price}
   </Card>
  
       
