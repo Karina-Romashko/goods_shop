@@ -2,6 +2,7 @@ import React from "react";
 import {Menu1} from "../Menu"
 import {Footer} from "../Footer"
 import {Card1} from "../Card"
+import css from "./styles.module.css"
 
 
 interface GeneralProps{
@@ -74,15 +75,15 @@ items: [{ id: 1, category_type: 'house', label: 'Коврик', price: 99, img: 
 
 
     return(
-        <div>
+        <div className={css.container}>
             <div style={{display:'flex', padding:'18px' }}>
             <Menu1 categories={categories} /> 
-      <img style={{width:'100%', height:'470px'}} src="https://cdn.ren.tv/cache/960x540/media/img/7d/4e/7d4e1c868f36e52de337b474dd6d9f1953072c8e.jpg" alt="" />
+      <img style={{width:'100%', height:'488px'}} src="https://cdn.ren.tv/cache/960x540/media/img/7d/4e/7d4e1c868f36e52de337b474dd6d9f1953072c8e.jpg" alt="" />
     </div>
      {goodsCategory.map((cat)=>(
        <section>
         
-           <h3 style={{textAlign:"center", fontSize:"20px"}}>{cat.category.label} </h3>
+           <h3 style={{ textAlign:"center", fontSize:"20px" }}>{cat.category.label} </h3>
 
          <div style={{display:'flex', justifyContent:"center"}}>
            {cat.items.map((item)=>(

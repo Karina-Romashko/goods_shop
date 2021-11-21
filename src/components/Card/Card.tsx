@@ -1,5 +1,6 @@
 import React from "react";
 import { Card } from 'antd';
+import css from "./styles.module.css"
 
 interface CardProps{
 id:number;
@@ -15,11 +16,11 @@ export const Card1:React.FC<CardProps> = ({id, label, price, img}) =>{
       
     <Card
         hoverable
-        style={{ width: 240, margin:"10px", backgroundColor: 'rgba(0, 0, 0, 0.12)' }}
+       style={{ width: 240, margin:"10px", backgroundColor: 'rgba(0, 0, 0, 0.12)' }}
        
     >
    
-    <img src={img} alt="" style={{width:"190px" , height:"110px"}} />
+    <img src={img} alt="" style={{width:"190px" , height:"120px"}} />
     {label} <br/>
     {price}
   </Card>

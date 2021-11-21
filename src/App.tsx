@@ -3,26 +3,19 @@ import 'antd/dist/antd.css';
 import {General} from "./components/General"
 import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-
-
-
 export function App() {
   return(
     <Router>
-    <Routes>
+     <Routes>
       <Route path="/" element={<General/>} />
-    </Routes>
+     </Routes>
     
   </Router> 
-
-      
-    
+ 
   )
 
 } 
   
-
-
 export default App;
 
 

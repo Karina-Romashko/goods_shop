@@ -1,4 +1,5 @@
 import React from "react";
+import css from "./styles.module.css"
 
 interface FooterProps{
 
@@ -6,7 +7,7 @@ interface FooterProps{
 
 export const Footer:React.FC<FooterProps> =({})=>{
     return(
-        <div style={{margin:"20px 58px"}}>
+        <div className={css.footer_container}>
             Общество с ограниченной ответственностью «Приносим радость». <br/>
             Свидетельство о государственной регистрации выдано Минским горисполкомом от 19.04.2018 с регистрационным номером 193067319. УНП 193067319. <br/>
             Юр. адрес: 220117, г. Минск, пр-т Газеты Звязда, д. 47, пом. 305. <br/>
