@@ -1,15 +1,16 @@
 import React from "react";
 import {Menu} from "antd"
 import { Link } from "react-router-dom";
+import {useSelector} from "react-redux"
+import {StoreSelectors} from "../../store"
 
 
-interface MenuProps {
-categories:{id:number, type:string, label:string }[];
-
-}
 
 
- export const Menu1:React.FC<MenuProps> = ({categories, })=>{
+
+ export const Menu1 = ()=>{
+
+    const categories = useSelector(StoreSelectors.getCategories)
     return(
         <div>
             <Menu style={{margin:" 0px 10px" , padding:"0px 10px"}} >
@@ -17,7 +18,7 @@ categories:{id:number, type:string, label:string }[];
                 { categories.map((category) => {
                     return(
                          <Menu.Item style={{marginBottom:'4px'}} key={category.id} >
-                             <Link to="#" >{category.label} </Link>
+                             <Link to={`/${category.type}`} >{category.label} </Link>
                          </Menu.Item>
                     )
                 })
