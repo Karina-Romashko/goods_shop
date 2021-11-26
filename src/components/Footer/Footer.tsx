@@ -1,11 +1,9 @@
 import React from "react";
 import css from "./styles.module.css"
 
-interface FooterProps{
 
-}
 
-export const Footer:React.FC<FooterProps> =({})=>{
+export const Footer =()=>{
     return(
         <div className={css.footer_container}>
             Общество с ограниченной ответственностью «Приносим радость». <br/>
