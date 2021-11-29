@@ -19,7 +19,7 @@ export const GoodsCategory = () =>{
          <div style={{display:'flex', justifyContent:"center"}}>
            {cat.items.map((item)=>(
                <Link to={`/${item.category_type}/${item.id}`}>
-            <Card1  id={item.id} label={item.label} price={item.price} img={item.img} category_type={item.category_type}></Card1>
+            <Card1  id={item.id} label={item.label} price={item.price} description={item.description} img={item.img} category_type={item.category_type}></Card1>
                 </Link>
          ))}
          </div>

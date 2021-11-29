@@ -8,10 +8,11 @@ category_type: string;
 label: string;
 price: number;
 img:string;
+description:string;
 }
 
 
-export const Card1:React.FC<CardProps> = ({id, label, price, img}) =>{
+export const Card1:React.FC<CardProps> = ({id, label, price, img, description}) =>{
      return(
       
     <Card
@@ -21,8 +22,10 @@ export const Card1:React.FC<CardProps> = ({id, label, price, img}) =>{
     >
    
     <img src={img} alt="" style={{width:"190px" , height:"120px"}} />
-    {label} <br/>
-    {price}
+    <p>{label} </p>
+    <p>{price}</p>
+    <p>{description}</p>
+    
   </Card>
  
       
