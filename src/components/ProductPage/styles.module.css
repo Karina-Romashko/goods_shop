@@ -1,0 +1,11 @@
+.content{
+ min-height: calc(100vh - 120px);
+}
+.container{
+    margin: 30px;
+}
+.back_link{
+    color:rgba(0, 0, 0, 0.85);
+     font-size:16px;
+     margin:20px;
+}

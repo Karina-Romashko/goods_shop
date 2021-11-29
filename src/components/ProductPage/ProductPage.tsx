@@ -3,6 +3,10 @@ import {useSelector} from "react-redux"
 import {StoreSelectors} from "../../store"
 import { Card1 } from "../Card";
 import { useNavigate, useParams } from "react-router-dom";
+import { Footer } from "../Footer";
+import css from "./styles.module.css";
+import { Header } from "../Header";
+
 
 export const ProductPage = ()=>{
     const goodsCategories = useSelector(StoreSelectors.getGoodsCategories)
@@ -16,10 +20,14 @@ export const ProductPage = ()=>{
 
     return(
 
-        <div>
-             <a onClick={()=>back(-1)}>Back</a>
-             <Card1  id={good.id} label={good.label} price={good.price} img={good.img} category_type={good.category_type}></Card1>
-
+        <div className={css.container}>
+            <div className={css.content}>
+                <Header/>
+            <a onClick={()=>back(-1)} className={css.back_link}>Back</a>
+             <Card1  id={good.id} label={good.label} price={good.price} description={good.description} img={good.img} category_type={good.category_type}></Card1>
+            </div>
+             
+        <Footer/>
         </div>
     )
 }

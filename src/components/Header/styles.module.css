@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.wrapper{
+    display: flex;
+    align-items: center;
+}
+.search_inp{
+    height: 40px;
+    width: 420px;
+}
+.search_b{
+    height: 40px;
+    width: 40px;
+   
+}
+.search_b:hover{
+    cursor: pointer;
+}
+.cart_b{
+    height: 35px;
+    width: 90px;
+}
+.cart_b:hover{
+    cursor: pointer;
+}
