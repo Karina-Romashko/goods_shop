@@ -2,7 +2,11 @@ import React from "react";
 import {Menu} from "antd"
 import { Link } from "react-router-dom";
 import {useSelector} from "react-redux"
-import {StoreSelectors} from "../../store"
+import { useEffect } from "react";
+import {StoreSelectors} from "../../store/categoriesSlice"
+import { useDispatch } from 'react-redux';
+import { fetchCategories } from "../../store/categoriesSlice/actionCreators";
+
 
 
 
@@ -10,7 +14,12 @@ import {StoreSelectors} from "../../store"
 
  export const Menu1 = ()=>{
 
-    const categories = useSelector(StoreSelectors.getCategories)
+     const categories = useSelector(StoreSelectors.getCategories)
+     const dispatch = useDispatch();
+    useEffect(()=>{
+        dispatch(fetchCategories())
+    },[]) 
+    console.log(categories)
     return(
         <div>
             <Menu style={{margin:" 0px 10px" , padding:"0px 10px"}} >
@@ -24,8 +33,6 @@ import {StoreSelectors} from "../../store"
                 })
 
                 }
-           
-           
             
         </Menu>
         </div>
