@@ -1,6 +1,7 @@
 import React from "react";
 import {useSelector} from "react-redux"
-import {StoreSelectors} from "../../store"
+//import {StoreSelectors} from "../../store/categoriesSlice"
+import {StoreSelectors} from "../../store/goodsSlice"
 import { Card1 } from "../Card";
 import { useNavigate, useParams } from "react-router-dom";
 import { Footer } from "../Footer";
@@ -9,7 +10,7 @@ import { Header } from "../Header";
 
 
 export const ProductPage = ()=>{
-    const goodsCategories = useSelector(StoreSelectors.getGoodsCategories)
+    const goodsCategories = useSelector(StoreSelectors.getGoods)
     const back = useNavigate();
     const {type, id} = useParams();
    const good = goodsCategories.find((category) => category.category.type === type)?.items.find((item) => item.id === Number(id));

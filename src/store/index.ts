@@ -1,2 +1,1 @@
-export { store} from "./store"
-export * as StoreSelectors from "./selectors"
+export {store} from "./store"

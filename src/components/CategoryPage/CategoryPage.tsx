@@ -1,16 +1,17 @@
 import React from "react";
 import {useSelector} from "react-redux"
-import {StoreSelectors} from "../../store"
 import { Card1 } from "../Card";
 import { useNavigate, useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Footer } from "../Footer";
 import css from "./styles.module.css"
 import { Header } from "../Header";
+import {StoreSelectors} from "../../store/goodsSlice"
 
 
 export const CategoryPage =()=>{
-    const goodsCategories = useSelector(StoreSelectors.getGoodsCategories)
+    const goodsCategories = useSelector(StoreSelectors.getGoods)
+    
     const back = useNavigate();
     const {type} = useParams();
     const cat = goodsCategories.find((el)=> el.category.type===type)

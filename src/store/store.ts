@@ -1,5 +1,18 @@
-import {createStore} from "redux"
-import { reducer } from "./reducer"
+import {createStore, combineReducers, applyMiddleware } from "redux"
+import { reducer as categoriesReducer } from "./categoriesSlice/reducer"
+import { reducer as goodsReducer } from "./goodsSlice/reducer"
+import { reducer as cartReducer } from "./cartSlice/reducer"
 
-export const store = createStore(reducer)
+import thunk from "redux-thunk";
+
+
+const rootReducer = combineReducers({
+   categories:categoriesReducer,
+   goods: goodsReducer,
+   cart:cartReducer,
+
+  });
+  
+  export const store = createStore(rootReducer, applyMiddleware(thunk));
+
 export type RootStore = ReturnType < typeof store.getState>;

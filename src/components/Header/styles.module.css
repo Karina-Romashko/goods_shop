@@ -8,11 +8,11 @@
     align-items: center;
 }
 .search_inp{
-    height: 40px;
+    height: 35px;
     width: 420px;
 }
 .search_b{
-    height: 40px;
+    height: 35px;
     width: 40px;
    
 }
@@ -25,4 +25,8 @@
 }
 .cart_b:hover{
     cursor: pointer;
+}
+.logo{
+    width: 180px;
+    height: 140px;
 }
