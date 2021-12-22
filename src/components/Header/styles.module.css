@@ -10,10 +10,19 @@
 .search_inp{
     height: 35px;
     width: 420px;
+    border: 2px solid gray;
+    border-radius: 3px;
+    margin-right: 1px;
+}
+.search_inp::placeholder{
+    font-size: 16px;
+    color:gray;
 }
 .search_b{
     height: 35px;
     width: 40px;
+    border: 2px solid gray;
+    border-radius: 3px;
    
 }
 .search_b:hover{
@@ -24,14 +33,17 @@
     width: 90px;
     font-size: 16px;
     margin-left: 30px;
+    border: 2px solid gray;
+    border-radius: 3px;
 }
 .cart_b:hover{
     cursor: pointer;
 }
 .logo{
     width: 180px;
-    height: 140px;
+    height: 150px;
 }
 .cartAndLog{
     display: flex;
+    
 }
