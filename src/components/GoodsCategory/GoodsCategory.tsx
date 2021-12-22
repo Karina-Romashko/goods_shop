@@ -2,20 +2,30 @@ import React from "react";
 import {Card1} from "../Card"
 import {useSelector} from "react-redux"
 //import {StoreSelectors} from "../../store/categoriesSlice"
-import {StoreSelectors} from "../../store/goodsSlice"
+//import {StoreSelectors} from "../../store/goodsSlice"
+import { StoreSelectors } from "../../store/goodsCategorySlice";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { fetchGoodsCategory } from "../../store/goodsCategorySlice/actionCreators";
 
 import {Link} from "react-router-dom"
 
 
 
 export const GoodsCategory = () =>{
+
+  const goodsCategory = useSelector(StoreSelectors.getGoodsCategory)
+  const dispatch = useDispatch()
+  useEffect(()=>{
+    dispatch(fetchGoodsCategory())
+  },[])
+
   
 
-    const goodsCategories = useSelector(StoreSelectors.getGoods)
-    console.log(goodsCategories)
-    return(
+    //const goodsCategories = useSelector(StoreSelectors.getGoods)
+       return(
             <div>
-                {goodsCategories.map((cat)=>(
+                {goodsCategory.map((cat)=>(
        <section key={cat.category.id}>
         
            <h3 style={{ textAlign:"center", fontSize:"20px" }}>{cat.category.label} </h3>
