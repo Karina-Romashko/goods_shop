@@ -20,6 +20,7 @@ import { fetchCategories } from "../../store/categoriesSlice/actionCreators";
         dispatch(fetchCategories())
     },[]) 
     console.log(categories)
+   
     return(
         <div>
             <Menu style={{margin:" 0px 10px" , padding:"0px 10px"}} >

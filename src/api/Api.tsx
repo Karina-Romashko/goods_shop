@@ -21,6 +21,17 @@ interface CartItem{
     img: string, 
     description:string;
 }
+interface GoodsCategory{
+   category:{ id:number
+   type:string;
+   label:string; },
+   items:{ id: number;
+    label: string;
+    category_type: string;
+    price:number, 
+    img: string, 
+    description:string;}[]
+}
 
 export class Api {
     getGoods(): Promise<{ items: Good[]; total: number }> {
@@ -28,14 +39,27 @@ export class Api {
             if (r.ok) {
                 return r.json()
             }
+           
             throw new Error("не ок");
         });
     }
+    getGoodsCategory(): Promise<{ goodsCategory: GoodsCategory[]; total: number }> {
+        return fetch('/api/popular_categories').then(r => {
+            if (r.ok) {
+                return r.json()
+                
+            }
+            
+            throw new Error("не ок");
+        });
+    }
+
     getCategories(): Promise<{ categories: Category[]; total: number }> {
         return fetch('/api/categories').then(r => {
             if (r.ok) {
                 return r.json()
             }
+         
             throw new Error("не ок");
         });
     }

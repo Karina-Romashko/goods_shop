@@ -25,5 +25,6 @@ export const fetchCategories = ()=> async (dispatch:Dispatch<unknown>)=> {
         dispatch(getCategoriesFailure())
     })
     }
+     
     
 
