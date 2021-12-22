@@ -15,7 +15,7 @@ export const ProductPage = ()=>{
     const {type, id} = useParams();
    const good = goodsCategories.find((category) => category.category.type === type)?.items.find((item) => item.id === Number(id));
     if(!good){
-        return <span>Sorry, there is no such product. Please, go <a onClick={()=>back(-1)}>Back</a> and  try something else. </span>
+        return <span>Данного продукта не существует. Вернуться  <a onClick={()=>back(-1)}>назад</a>. </span>
     }
 
 
@@ -24,7 +24,10 @@ export const ProductPage = ()=>{
         <div className={css.container}>
             <div className={css.content}>
                 <Header/>
-            <a onClick={()=>back(-1)} className={css.back_link}>Back</a>
+                <div className={css.link}>
+                    <a onClick={()=>back(-1)} className={css.back_link}> Вернуться назад</a>
+                </div>
+           
              <Card1  id={good.id} label={good.label} price={good.price} description={good.description} img={good.img} category_type={good.category_type}></Card1>
             </div>
              
