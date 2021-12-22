@@ -16,14 +16,14 @@ export const CategoryPage =()=>{
     const {type} = useParams();
     const cat = goodsCategories.find((el)=> el.category.type===type)
     if(!cat){
-        return <span>Sorry, there is no such category. Please, go <a onClick={()=>back(-1)}>Back</a> and  try something else. </span>
+        return <span>Данной категории не существует. Вернуться <a onClick={()=>back(-1)}>назад</a>  </span>
     }
 
     return(
         <div className={css.container}>
             <div className={css.content}>
                 <Header/>
-                <a onClick={()=>back(-1)} style={{color:"rgba(0, 0, 0, 0.85)", fontSize:"16px", margin:"20px"}}>Back</a>
+                <a onClick={()=>back(-1)} style={{color:"rgba(0, 0, 0, 0.85)", fontSize:"16px", margin:"20px"}}>Вернуться назад</a>
             
             <h3 style={{ textAlign:"center", fontSize:"20px" }}>{cat.category.label} </h3>
 
