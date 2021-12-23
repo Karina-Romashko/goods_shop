@@ -4,18 +4,18 @@ import {Footer} from "../Footer"
 import css from "./styles.module.css"
 import {GoodsCategory} from "../GoodsCategory"
 import { Header } from "../Header";
-import { Carousel } from 'antd';
+// import { Carousel } from 'antd';
 
 
 
 export const General = ()=>{
-    const contentStyle = {
-        height: '160px',
-        color: '#fff',
-        lineHeight: '160px',
-        textAlign: 'center',
-        background: '#364d79',
-      };
+    // const contentStyle = {
+    //     height: '160px',
+    //     color: '#fff',
+    //     lineHeight: '160px',
+    //     textAlign: 'center',
+    //     background: '#364d79',
+    //   };
 
     return(
         <div className={css.container}>
